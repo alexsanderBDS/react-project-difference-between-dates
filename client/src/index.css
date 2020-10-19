@@ -1,0 +1,116 @@
+body
+{
+    margin: auto;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+
+}   
+
+#root > h1
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+
+}
+
+.circle > h1
+{
+    font-size: 40px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+label
+{
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+.root
+{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.root > div
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.root > div .circle
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 300PX;
+    height: 300px;
+    animation: pulse 4s linear infinite;
+    padding: 10PX;
+}
+
+input[type="date"]
+{
+    background: rgba(255, 255, 255, .7);
+    border: none;
+    outline: none;
+    padding: 6px;
+}
+
+.alexsander
+{
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    animation: demo 5s linear 1;
+    opacity: 0;
+    left: -100px;
+}
+
+@keyframes demo
+{
+    0% {left: 20px;opacity: .1;}
+    40% {left: 40px; opacity: .2;}
+    80% {left: 80px; opacity: .2;}
+    100% {left: 40%; opacity: .3;}
+}
+
+@keyframes pulse
+{
+    0%
+    {
+        box-shadow: 0 0 0 0 rgba(218, 218, 209, .7), 0 0 0 0 rgba(218, 218, 209, .7);
+    }
+    40%
+    {
+        box-shadow: 0 0 50px 50px rgba(218, 218, 209, .7), 0 0 0 0 rgba(218, 218, 209, .7);
+    }
+    80%
+    {
+        box-shadow: 0 0 50px 50px rgba(218, 218, 209, 0), 0 0 0 0 rgba(218, 218, 209, 0);
+    }
+    100%
+    {
+        box-shadow: 0 0 50px 0 rgba(218, 218, 209, 0), 0 0 0 0 rgba(218, 218, 209, 0);
+        color: black;
+    }
+
+}
